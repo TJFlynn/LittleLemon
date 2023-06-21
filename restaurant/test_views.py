@@ -1,10 +1,10 @@
 from django.test import TestCase
-from . views import MenuItem
-from . serializers import MenuItemSerializer
+from .views import Menu
+from .serializers import MenuItemSerializer
 from decimal import Decimal
 class MenuViewTest(TestCase):
     def setUp(self):
-        self.menu_item = MenuItem.objects.create(title='Pizza', price=15.00, inventory=5)
+        self.menu_item = Menu.objects.create(title='Pizza', price=15.00, inventory=5)
         self.serialized_item = MenuItemSerializer(self.menu_item)
     def test_get_all(self):
         data = self.serialized_item.data 
