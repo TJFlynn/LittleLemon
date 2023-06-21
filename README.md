@@ -4,11 +4,11 @@ Static files are hosted at http://127.0.0.1:8000/api/restaurant/
 
 In settings.py the name of the database, user, and password fields need to be updated to match your local mysql information.
 
-If you already have a database called ‘restaurant’ you will have to drop and recreate it, and then apply migrations.
+If you already have a database called ‘restaurant’ drop and recreate it, then apply migrations.
 
-Then create a new super user of your choice and login with a POST at http://127.0.0.1:8000/auth/token/login/
+Create a new super user of your choice and login with a POST at http://127.0.0.1:8000/auth/token/login/
 
-using this as and example of the BODY in JSON format
+using this as an example of the BODY in JSON format
 
 {
     "username" : "your_super_admin",
